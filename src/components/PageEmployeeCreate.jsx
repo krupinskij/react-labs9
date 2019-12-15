@@ -96,4 +96,17 @@ class PageEmployeeCreate extends React.Component {
   }
 }
 
-export default connect()(withRouter(PageEmployeeCreate));
+const mapStateToProps = (state /*, ownProps*/) => {
+  return {
+    employee: state.employee
+  }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  employeeAdded: employee => dispatch(employeeAdded(employee))
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(withRouter(PageEmployeeCreate));
