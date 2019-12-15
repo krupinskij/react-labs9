@@ -1,5 +1,6 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 class PageEmployeeCreate extends React.Component {
   constructor(props) {
@@ -95,4 +96,4 @@ class PageEmployeeCreate extends React.Component {
   }
 }
 
-export default withRouter(PageEmployeeCreate);
+export default connect()(withRouter(PageEmployeeCreate));
