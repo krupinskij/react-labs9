@@ -1,7 +1,6 @@
 import { EMPLOYEES_LOADED, EMPLOYEE_ADDED, EMPLOYEES_LOADING, EMPLOYEES_LOADING_ERROR } from './constants';
 
 export const loadEmployees = () => {
-  console.log("AAAA");
   return dispatch => {
     dispatch(employeesLoading())
     return fetch('http://localhost:3004/employees')
