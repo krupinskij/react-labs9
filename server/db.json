@@ -1,5 +1,5 @@
 {
-  "users":[
+  "users": [
     {
       "username": "john",
       "full_name": "John Doe"
@@ -197,6 +197,30 @@
       "age": 18,
       "company": "Emil SA",
       "email": "ee@wp.pl"
+    },
+    {
+      "_id": 1576963875305,
+      "id": 1576963875305,
+      "name": "Franek Fabacki",
+      "age": 18,
+      "company": "Franek SA",
+      "email": "ff@wp.pl"
+    },
+    {
+      "_id": 1576964274240,
+      "id": 1576964274240,
+      "name": "Grażyna Gabacka",
+      "age": 18,
+      "company": "Grażyna SA",
+      "email": "gg@wp.pl"
+    },
+    {
+      "_id": 1576964977983,
+      "id": 1576964977983,
+      "name": "Halina Habacka",
+      "age": 18,
+      "company": "Halina SA",
+      "email": "hh@wp.pl"
     }
   ]
 }

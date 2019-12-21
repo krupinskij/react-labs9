@@ -2,7 +2,8 @@ export const EMPLOYEES_LOADING = 'Employees/EMPLOYEES_LOADING';
 export const EMPLOYEES_LOADED = 'Employees/EMPLOYEES_LOADED';
 export const EMPLOYEES_LOADING_ERROR = 'Employees/EMPLOYEES_LOADING_ERROR';
 
-
-
-
 export const EMPLOYEE_ADDED = "Employees/EMPLOYEE_ADDED";
+
+export const USER_LOGGING = 'Users/USER_LOGGING';
+export const USER_LOGGED = 'Users/USER_LOGGED';
+export const USER_LOGGING_ERROR = 'Users/USER_LOGGING_ERROR';

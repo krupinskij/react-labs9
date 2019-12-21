@@ -24,6 +24,12 @@ class PageEmployeeCreate extends React.Component {
     }
   }
 
+  componentWillMount() {
+    if(!this.props.user) {
+      this.props.history.push("/")
+    }
+  }
+
   nameChanged(e) {
     this.setState({ name: e.target.value });
   }
@@ -71,7 +77,7 @@ class PageEmployeeCreate extends React.Component {
         this.setState({ isSaving: false, error: `Saving returned status ${res.status}`})
       } else {
         this.props.employeeAdded(employee);
-        this.props.history.push("/");
+        this.props.history.push("/list");
       }
     })  
   }
@@ -102,7 +108,8 @@ class PageEmployeeCreate extends React.Component {
 
 const mapStateToProps = (state /*, ownProps*/) => {
   return {
-    employee: state.employee
+    employee: state.employee,
+    user: state.user
   }
 }
 
