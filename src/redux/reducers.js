@@ -1,4 +1,9 @@
-import { EMPLOYEES_LOADED, EMPLOYEE_ADDED } from './constants';
+import { 
+  EMPLOYEES_LOADING, 
+  EMPLOYEES_LOADED, 
+  EMPLOYEES_LOADING_ERROR,
+  EMPLOYEE_ADDED 
+} from './constants';
 
 export const initialState = {
   employees: [],
@@ -8,10 +13,16 @@ export const initialState = {
 
 const appReducer = (state = initialState, action) => {
   switch (action.type) {
+    case EMPLOYEES_LOADING: {
+      return Object.assign({}, state, { loading: true, error: null })
+    }
     case EMPLOYEES_LOADED: {
       const { employees } = action.payload;
-      // CAREFUL: You can't modify state variable directly.
-      return Object.assign({}, state, { employees });
+      return Object.assign({}, state, { employees, loading: false, error: false });
+    }
+    case EMPLOYEES_LOADING_ERROR: {
+      const { error } = action.payload;
+      return Object.assign({}, state, { loading: true, error })
     }
     case EMPLOYEE_ADDED: {
       const { employee } = action.payload;
